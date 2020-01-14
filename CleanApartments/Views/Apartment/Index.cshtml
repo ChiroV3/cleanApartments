@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "Apartments";
+}
+@using CleanApartments.Common.Models;
+
+@model dynamic
+
+<div class="container">
+
+    <div class=" row">
+        <div class="col-md-3">
+            <div class="row">
+                <h3>Locations</h3>
+                <div role="tablist" class="list-group col-md-12">
+                    @foreach (var location in Model.Locations)
+                    {
+                        <input type="button" role="tab" id="@location.Id" value="@location.Name" data-toggle="list" class="list-group-item group-item-action locationButton" />
+                    }
+                </div>
+
+            </div>
+            <div class="row">
+                <h3>Cleaned Apartments</h3>
+                <table role="tablist" class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Add to awaiting cleaning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var apartment in Model.CleanedApartments)
+                        {
+                        <tr>
+                            <td>
+                                @apartment.ApartmentId
+                            </td>
+                            <td>
+                                @apartment.Name
+                            </td>
+                            <td>
+                                <button type="button" id="cleanApartmentAgain" onclick="cleanApartmentAgain(this)" class="btn btn-dark" data-apartment="@apartment.ApartmentId">Send to cleaning</button>
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Apartments</h3>
+            <h4 id="apartmentNameLabel"></h4>
+            <div id="apartmentContainer">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
