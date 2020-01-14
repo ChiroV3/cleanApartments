@@ -31,5 +31,17 @@ namespace CleanApartments.BusinessLogic.ApartmentServices
         {
             return unitOfWork.ApartmentRepository.Get(apartmentId);
         }
+
+        public string GetApartmentNameWithLocation(Apartment apartment)
+        {
+            string result = string.Empty;
+
+            if(apartment != null && apartment.Location != null)
+            {
+                result = $"{apartment.Location.Name} - {apartment.Name}";
+            }
+
+            return result;
+        }
     }
 }

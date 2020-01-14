@@ -18,5 +18,6 @@ namespace CleanApartments.Common.Models
         public Location Location { get; set; }
 
         public ApartmentStatus Status { get; set; }
+
     }
 }
