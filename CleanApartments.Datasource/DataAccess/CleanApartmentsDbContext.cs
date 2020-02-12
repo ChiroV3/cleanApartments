@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace CleanApartments.Datasource.DataAccess
@@ -19,7 +20,7 @@ namespace CleanApartments.Datasource.DataAccess
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var configuration = new ConfigurationBuilder()
-                        .SetBasePath(Directory.GetCurrentDirectory())
+                        .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location))
                         .AddJsonFile("appsettings.json")
                         .Build();
             var connectionString = configuration["DefaultConnection"];

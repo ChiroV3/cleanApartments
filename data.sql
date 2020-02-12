@@ -21,7 +21,7 @@ SET row_security = off;
 --
 -- TOC entry 2859 (class 0 OID 16513)
 -- Dependencies: 198
--- Data for Name: Locations; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: Locations; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."Locations" ("Id", "Name") FROM stdin;
@@ -33,7 +33,7 @@ COPY public."Locations" ("Id", "Name") FROM stdin;
 --
 -- TOC entry 2862 (class 0 OID 16532)
 -- Dependencies: 201
--- Data for Name: Apartments; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: Apartments; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."Apartments" ("ApartmentId", "Name", "LocationId", "Status") FROM stdin;
@@ -46,7 +46,7 @@ COPY public."Apartments" ("ApartmentId", "Name", "LocationId", "Status") FROM st
 --
 -- TOC entry 2864 (class 0 OID 16548)
 -- Dependencies: 203
--- Data for Name: Users; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: Users; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."Users" ("Id", "FirstName", "LastName", "Username", "LocationId") FROM stdin;
@@ -56,7 +56,7 @@ COPY public."Users" ("Id", "FirstName", "LastName", "Username", "LocationId") FR
 --
 -- TOC entry 2866 (class 0 OID 16564)
 -- Dependencies: 205
--- Data for Name: ApartmentCleaningActivities; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: ApartmentCleaningActivities; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."ApartmentCleaningActivities" ("Id", "ApartmentId", "CleanerId", "HasIssuesToReport", "Notes") FROM stdin;
@@ -84,7 +84,7 @@ COPY public."ApartmentCleaningActivities" ("Id", "ApartmentId", "CleanerId", "Ha
 --
 -- TOC entry 2868 (class 0 OID 16585)
 -- Dependencies: 207
--- Data for Name: UserGroupAssignments; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: UserGroupAssignments; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."UserGroupAssignments" ("UserGroupAssigmentId", "UserId", "UserGroupId") FROM stdin;
@@ -94,7 +94,7 @@ COPY public."UserGroupAssignments" ("UserGroupAssigmentId", "UserId", "UserGroup
 --
 -- TOC entry 2860 (class 0 OID 16522)
 -- Dependencies: 199
--- Data for Name: UserGroups; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: UserGroups; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."UserGroups" ("UserGroupId", "Name") FROM stdin;
@@ -104,7 +104,7 @@ COPY public."UserGroups" ("UserGroupId", "Name") FROM stdin;
 --
 -- TOC entry 2857 (class 0 OID 16506)
 -- Dependencies: 196
--- Data for Name: __EFMigrationsHistory; Type: TABLE DATA; Schema: public; Owner: TestUser
+-- Data for Name: __EFMigrationsHistory; Type: TABLE DATA; Schema: public; Owner: TestUserDb
 --
 
 COPY public."__EFMigrationsHistory" ("MigrationId", "ProductVersion") FROM stdin;
@@ -115,7 +115,7 @@ COPY public."__EFMigrationsHistory" ("MigrationId", "ProductVersion") FROM stdin
 --
 -- TOC entry 2874 (class 0 OID 0)
 -- Dependencies: 204
--- Name: ApartmentCleaningActivities_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUser
+-- Name: ApartmentCleaningActivities_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUserDb
 --
 
 SELECT pg_catalog.setval('public."ApartmentCleaningActivities_Id_seq"', 18, true);
@@ -124,7 +124,7 @@ SELECT pg_catalog.setval('public."ApartmentCleaningActivities_Id_seq"', 18, true
 --
 -- TOC entry 2875 (class 0 OID 0)
 -- Dependencies: 200
--- Name: Apartments_ApartmentId_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUser
+-- Name: Apartments_ApartmentId_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUserDb
 --
 
 SELECT pg_catalog.setval('public."Apartments_ApartmentId_seq"', 1, false);
@@ -133,7 +133,7 @@ SELECT pg_catalog.setval('public."Apartments_ApartmentId_seq"', 1, false);
 --
 -- TOC entry 2876 (class 0 OID 0)
 -- Dependencies: 197
--- Name: Locations_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUser
+-- Name: Locations_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUserDb
 --
 
 SELECT pg_catalog.setval('public."Locations_Id_seq"', 1, false);
@@ -142,7 +142,7 @@ SELECT pg_catalog.setval('public."Locations_Id_seq"', 1, false);
 --
 -- TOC entry 2877 (class 0 OID 0)
 -- Dependencies: 206
--- Name: UserGroupAssignments_UserGroupAssigmentId_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUser
+-- Name: UserGroupAssignments_UserGroupAssigmentId_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUserDb
 --
 
 SELECT pg_catalog.setval('public."UserGroupAssignments_UserGroupAssigmentId_seq"', 1, false);
@@ -151,7 +151,7 @@ SELECT pg_catalog.setval('public."UserGroupAssignments_UserGroupAssigmentId_seq"
 --
 -- TOC entry 2878 (class 0 OID 0)
 -- Dependencies: 202
--- Name: Users_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUser
+-- Name: Users_Id_seq; Type: SEQUENCE SET; Schema: public; Owner: TestUserDb
 --
 
 SELECT pg_catalog.setval('public."Users_Id_seq"', 1, false);

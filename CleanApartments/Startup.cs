@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using CleanApartments.BusinessLogic.ApartmentServices;
 using CleanApartments.BusinessLogic.LocationServices;
@@ -30,7 +31,7 @@ namespace CleanApartments
         public void ConfigureServices(IServiceCollection services)
         {
             var configuration = new ConfigurationBuilder()
-                     .SetBasePath(Directory.GetCurrentDirectory())
+                     .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location))
                      .AddJsonFile("appsettings.json")
                      .Build();
             var connectionString = configuration["DefaultConnection"];
