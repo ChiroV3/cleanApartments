@@ -3,7 +3,7 @@ Informacje dotyczące aplikacji
 -Aplikacja ma na celu poprawę oraz optymalizację procesu czyszczenia apartamentów. Ze względu na rosnącą liczbę apartamentów zarządzający nimi ludzie mają problem z dogadywaniem się ze sprzątaczami, który apartament został posprzątany i wymaga ponownego sprzątania, proces ten do tej pory odbywa się telefonicznie, często pojawiają się pomyłki. Aplikacja umożliwia umieszczanie i zarządzanie takimi informacjami w jednym miejscu.
 Uruchomienie aplikacji
 1.	Pobrać repozytorium z aplikacja wykonaną w ASP MVC CORE
-2.	Należy na serwerze postgresql stworzyć użytkownika "TestUser", następnie utworzyć bazę danych "TestCleaningDb", a następnie należy wykonać na serwerze postgresql skrypt, który  utworzy bazę danych oraz wypełni ją początkowymi danymi. Plik o nazwie: „createDatabase.sql” a następnie wykonać skrypt który wypełni bazę przykładowymi danymi „data.sql”
+2.	Należy na serwerze postgresql stworzyć użytkownika "TestUser", następnie utworzyć bazę danych "TestCleaningDb", a następnie należy wykonać na serwerze postgresql skrypt, który  utworzy bazę danych oraz wypełni ją początkowymi danymi. Otworzyć lokalizacje repozytorium w której znajduje się Plik o nazwie: „createDatabase.sql” a następnie wykonać skrypt za pomocą basha lub cmd "psql -U postgres -d TestCleaningDb -a -f createDatabase.sql", analogicznie wykonac skrypt dla "data.sql"
 3.	Ustawić w appsettings.json głownego projektu scieżkę do bazy danych, pod parametrem „DefaultConnection”.
 4.	Uruchomić Aplikację.
 
